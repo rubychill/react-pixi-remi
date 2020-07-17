@@ -11,7 +11,7 @@ module.exports = {
   module: { rules: [{ test: /\.tsx?$/, use: 'ts-loader', exclude: /node_modules/ }] },
   output: { path: buildPath },
   devServer: { contentBase: 'build', port: 3000, hot: true },
-  resolve: { extensions: ['.ts', '.js'] },
+  resolve: { extensions: ['.ts', '.js', '.tsx'] },
   plugins: [
     new CopyWebpackPlugin({ patterns: [{ from: 'assets', to: '', globOptions: { ignore: ['**/index.html'] } }] }),
     new HTMLWebpackPlugin(
